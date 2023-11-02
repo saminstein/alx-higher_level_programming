@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+from add_0 import add
+
+if __name__ == "__main__":
+    """
+    prints the result of the addition of two numbers
+    """
+
+    a = 1
+    b = 2
+
+    result = add(a, b)
+    print(f"{a} + {b} = {result}")
