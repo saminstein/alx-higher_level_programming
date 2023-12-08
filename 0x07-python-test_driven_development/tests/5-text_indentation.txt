@@ -1,0 +1,33 @@
+===============================
+5. Test indentation module
+===============================
+
+Import module:
+==============
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Function:
+=========
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+Operation:
+==========
+* 'text' must be a string, otherwise raise a TypeError exception with the message text must be a string
+
+* There should be no space at the beginning or at the end of each printed line
+
+Test case #0: A test without a parameter
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+    
+Test case #1: A test with an integer
+    >>> text_indentation(100)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    
+Test case #2: A test with an infinite float number
+    >>> text_indentation(1e400)
+    Traceback (most recent call last):
+    TypeError: text must be a string
