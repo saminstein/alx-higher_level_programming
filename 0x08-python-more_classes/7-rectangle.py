@@ -60,7 +60,8 @@ class Rectangle:
             
     return empty_str
 
-  print(Rectangle.draw_rectangle())
+  def __str__(self):
+    return self.draw_rectangle()
         
   def __repr__(self):
     
