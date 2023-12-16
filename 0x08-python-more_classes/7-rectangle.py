@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 
 class Rectangle:
   number_of_instances = 0
@@ -19,8 +18,8 @@ class Rectangle:
     self.__width = value
     if type(value) is not int:
       raise TypeError("width must be an integer")
-      if value < 0:
-        raise ValueError("width must be >= 0")
+    if value < 0:
+      raise ValueError("width must be >= 0")
         
   @property
   def height(self):
@@ -31,8 +30,8 @@ class Rectangle:
     self.__height = value
     if type(value) is not int:
       raise TypeError("width must be an integer")
-      if value < 0:
-        raise ValueError("width must be >= 0")
+    if value < 0:
+      raise ValueError("width must be >= 0")
           
   def area(self):
     result = self.__width * self.__height
@@ -60,6 +59,8 @@ class Rectangle:
             empty_str += "\n"
             
     return empty_str
+
+  print(Rectangle.draw_rectangle())
         
   def __repr__(self):
     
