@@ -80,3 +80,8 @@ class Rectangle(Base):
       
     if value < 0 and attr in ('x', 'y'):
       raise ValueError(f'{attr} must be >= 0')
+      
+  def area(self):
+    ''' method returns the area '''
+    a = self.__height * self.__width
+    return a
