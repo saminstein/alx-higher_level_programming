@@ -6,6 +6,13 @@ class Rectangle(Base):
   def __init__(self, width, height, x=0, y=0, id=None):
     ''' constructor initializes a rectangle with dimensions, postions & id '''
     super().__init__(id)
+    
+    ''' calls the validation function '''
+    self.valid_setter(width, 'width')
+    self.valid_setter(height, 'height')
+    self.valid_setter(x, 'x')
+    self.valid_setter(y, 'y')
+      
     self.__width = width
     self.__height = height
     self.__x = x
@@ -18,7 +25,9 @@ class Rectangle(Base):
     
   @width.setter
   def width(self, value):
-    ''' sets the value of the private attr '''
+    ''' sets the value of the private attr and calls the validation function '''
+    
+    self.valid_setter(value, 'width')
     self.__width = value
 
 
@@ -29,7 +38,9 @@ class Rectangle(Base):
     
   @height.setter
   def height(self, value):
-    ''' sets the value of the private attr '''
+    ''' sets the value of the private attr and calls the validation function '''
+    
+    self.valid_setter(value, 'height')
     self.__height = value
    
  
@@ -40,7 +51,9 @@ class Rectangle(Base):
   
   @x.setter
   def x(self, value):
-    ''' sets the value of the private attr '''
+    ''' sets the value of the private attr and calls the validation function '''
+    
+    self.valid_setter(value, 'x')
     self.__x = value
   
 
@@ -51,17 +64,19 @@ class Rectangle(Base):
     
   @y.setter
   def y(self, value):
-    ''' sets the value of the private attr '''
+    ''' sets the value of the private attr and calls the validation function '''
+    
+    self.valid_setter(value, 'y')
     self.__y = value
   
   
-  @property
-  def id(self):
-    ''' retrieves the value of the private attr '''
-    return self.__id
-    
-  @id.setter
-  def id(self, value):
-    ''' sets the value of the private attr '''
-    self.__id = value
-    
+  def valid_setter(self, value, attr):
+    ''' method that adds validation of attr '''
+    if not isinstance(value, int):
+      raise TypeError(f'{attr} must be an integer')
+      
+    if value <= 0 and attr in ('width', 'height'):
+      raise ValueError(f'{attr} must be > 0')
+      
+    if value < 0 and attr in ('x', 'y'):
+      raise ValueError(f'{attr} must be >= 0')
