@@ -83,16 +83,26 @@ class Rectangle(Base):
       
   def area(self):
     ''' method returns the area '''
+    
     a = self.__height * self.__width
     return a
     
   def display(self):
+    ''' method that prints a rectangle instance with the character <#>, handles the w, h & postions: x, y '''
+    for _ in range(self.__y):
+      print()
+    
     for rows in range(self.__height):
+      for _ in range(self.__x):
+        print(" ", end='')
+        
       for cols in range(self.__width):
         print('#', end='')
       print()
       
   def __str__(self):
+    ''' string representation of an object: this method is called when an object is printed '''
+    
     return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
     
   
