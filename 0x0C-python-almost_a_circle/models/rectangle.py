@@ -118,5 +118,11 @@ class Rectangle(Base):
       if key in attr:
         setattr(self, key, value)
         
+  def to_dictionary(self):
+      ''' function that returns the dictionary representation of a rectangle '''
+    
+    d_ict = {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
+    return d_ict
+        
     
   
