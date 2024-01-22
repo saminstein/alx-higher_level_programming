@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 
 class Base:
   ''' Base class '''
@@ -16,3 +17,10 @@ class Base:
   def incre_objects(cls):
     ''' function to track the number of instances created '''
     cls.__nb_objects += 1
+    
+  def to_json_string(list_dictionaries):
+    if list_dictionaries is None:
+      return "[]"
+    else:
+      json_str = json.dumps(list_dictionaries)
+      return json_str
