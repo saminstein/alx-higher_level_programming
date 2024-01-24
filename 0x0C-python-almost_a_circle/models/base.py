@@ -17,7 +17,8 @@ class Base:
   def incre_objects(cls):
     ''' function to track the number of instances created '''
     cls.__nb_objects += 1
-    
+  
+  @staticmethod
   def to_json_string(list_dictionaries):
     ''' function that converts a dictionary to a json str '''
     if list_dictionaries is None:
@@ -43,3 +44,18 @@ class Base:
     with open(filename, mode= 'w', encoding= 'utf-8') as file:
       json_str = cls.to_json_string(list_objs)
       file.write(json_str)
+      
+  @staticmethod   
+  def from_json_string(json_string):
+     ''' function that converts a json string to a dictionary
+     
+     Parameters: a string representing a list of
+     dictionaries
+     '''
+     if json_string is None:
+        return '[]'
+     else:
+       data_dict = json.loads(json_string)
+       return data_dict
+       
+  
