@@ -57,5 +57,17 @@ class Base:
      else:
        data_dict = json.loads(json_string)
        return data_dict
-       
   
+  @classmethod
+  def create(cls, **dictionary):
+    from models.rectangle import Rectangle
+    from models.square import Square
+    
+    if cls == Rectangle:
+      dummy = cls(3, 5)
+    if cls == Square:
+      dummy = cls(2)
+      
+    dummy.update(**dictionary)
+    return dummy
+    
