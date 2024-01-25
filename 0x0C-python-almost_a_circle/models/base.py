@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 import json
+import os.path
 
 class Base:
   ''' Base class '''
@@ -62,6 +64,7 @@ class Base:
   def create(cls, **dictionary):
     from models.rectangle import Rectangle
     from models.square import Square
+    ''' function to create instances of the class <Rectangle> or <Square> with attributes initialized based on <dict> '''
     
     if cls == Rectangle:
       dummy = cls(3, 5)
@@ -71,3 +74,16 @@ class Base:
     dummy.update(**dictionary)
     return dummy
     
+  @classmethod
+  def load_from_file(cls):
+    '''return list of instances '''
+    
+    filename = cls.__name__ + '.json'
+    if os.path.exists(filename):
+      with open(filename, mode='r', encoding= 'utf-8') as file:
+        data = cls.from_json_string(file.read())
+        instances = [cls.create(**attr) for attr in data]
+      
+      return instances
+    else:
+      return []
