@@ -4,8 +4,8 @@ if __name__ == "__main__":
     """
     program that prints the number of and the list of its argumments
     """
-    
-    argv  = sys.argv
+
+    argv = sys.argv
     num_args = len(argv) - 1
 
     if num_args == 1:
