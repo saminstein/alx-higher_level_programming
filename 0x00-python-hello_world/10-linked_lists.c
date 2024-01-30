@@ -15,7 +15,7 @@ size_t print_listint(const listint_t *h)
 
 	current = h;
 	n = 0;
-	while(current != NULL)
+	while (current != NULL)
 	{
 		printf("%i\n", current->n);
 		current = current->next;
@@ -25,7 +25,7 @@ size_t print_listint(const listint_t *h)
 }
 
 /**
- * add_nodeint - adds a new node at the beginning 
+ * add_nodeint - adds a new node at the beginning
  * of a listint_t list
  * @head: pointer to a pointer of the start of the
  * list
@@ -57,7 +57,7 @@ void free_listint(listint_t *head)
 {
 	listint_t *current;
 
-	while(head != NULL)
+	while (head != NULL)
 	{
 		current = head;
 		head = head->next;
