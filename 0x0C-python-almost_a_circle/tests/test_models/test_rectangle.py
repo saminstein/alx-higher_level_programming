@@ -117,8 +117,21 @@ class TestRectangle(unittest.TestCase):
         ''' test the str method '''
 
         r1 = Rectangle(3, 2, 1, 1, 4)
+        self.assertEqual(str(r1), '[Rectangle] (4) 1/1 - 3/2')
+
+        '''
+        r1 = Rectangle(3, 2, 1, 1, 4)
         self.assertEqual(str(r1), '[Rectangle] (4)         1/1 - 3/2')
+        '''
 
     def test_invalid_arg(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(3, 2, 1, 1, 4, 10)
+
+    def test_to_dictionary_values(self):
+        ''' test with specified values '''
+
+        r4 = Rectangle(1, 1)
+        r4_dictionary = r4.to_dictionary()
+        expected = "{'id': 3, 'width': 1, 'height': 1, 'x': 0, 'y': 0}"
+        self.assertEqual(str(r4_dictionary), expected)
