@@ -12,3 +12,6 @@ test_rectangle:
 
 test_square:
 	python3 -m unittest tests/test_models/test_square.py
+
+test_all:
+	python3 -m unittest discover tests/test_models

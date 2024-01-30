@@ -119,11 +119,6 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(3, 2, 1, 1, 4)
         self.assertEqual(str(r1), '[Rectangle] (4) 1/1 - 3/2')
 
-        '''
-        r1 = Rectangle(3, 2, 1, 1, 4)
-        self.assertEqual(str(r1), '[Rectangle] (4)         1/1 - 3/2')
-        '''
-
     def test_invalid_arg(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(3, 2, 1, 1, 4, 10)
