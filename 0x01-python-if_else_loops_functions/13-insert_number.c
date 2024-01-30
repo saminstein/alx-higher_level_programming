@@ -1,6 +1,16 @@
 #include "lists.h"
 #include <stdlib.h>
 
+/**
+ * insert_node - inserts a node at a given pos
+ * ition
+ * @head: This is a pointer to a pointer to
+ * the head of the linked list
+ * @number: This is the integer value that you
+ * want to insert into the linked list.
+ * Return: returning a pointer to a node in
+ * the linked list.
+ */
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new;
