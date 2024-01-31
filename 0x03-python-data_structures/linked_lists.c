@@ -27,7 +27,7 @@ size_t print_listint(const listint_t *h)
  * @head: The head of the linked list
  * @n: The value to add at the end of the linked
  * list
- * Return: the address of the new element, or 
+ * Return: the address of the new element, or
  * NULL if it failed
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)

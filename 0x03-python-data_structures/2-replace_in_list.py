@@ -10,12 +10,13 @@ def replace_in_list(my_list, idx, element):
         element: The element to replace with
 
     Returns:
-        if idx is negative return none, if idx is out of range return original list
+        if idx is negative return none, if idx is out of range
+        return original list
     """
 
     list_len = len(my_list)
 
-    if 0 <= idx  and idx < list_len:
+    if 0 <= idx and idx < list_len:
         my_list[idx] = element
         return my_list
     else:
