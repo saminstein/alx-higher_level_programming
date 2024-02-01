@@ -7,5 +7,5 @@ matrix = [
     [4, 5, 6]
 ]
 
-print(type(matrix_divided(matrix, 0)))
+print(type(matrix_divided(matrix, 3)))
 print(matrix)
