@@ -10,11 +10,11 @@ emp_list = []
 num_arg = len(argv)
 
 if path.exists('add_item.json'):
-  obj_json = load_from_json_file('add_item.json')
+    obj_json = load_from_json_file('add_item.json')
 else:
-  obj_json = emp_list
-  
+    obj_json = emp_list
+
 for i in range(1, num_arg):
-  obj_json.append(argv[i])
+    obj_json.append(argv[i])
 
 save_to_json_file(obj_json, 'add_item.json')
