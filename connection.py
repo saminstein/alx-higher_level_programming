@@ -7,11 +7,4 @@ db=MySQLdb.connect (
         database="saminstein"
         )
 
-mycursor = db.cursor()
-
-mycursor.execute("SELECT * FROM students")
-
-myresult = mycursor.fetchall()
-
-for row in myresult:
-    print(row)
+print(db)
