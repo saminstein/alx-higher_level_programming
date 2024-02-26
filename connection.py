@@ -1,13 +1,13 @@
-import mysql.connector
+import MySQLdb
 
-mydb=mysql.connector.connect (
+db=MySQLdb.connect (
         host="localhost",
         user="root",
-        password="einstein2",
+        passwd="einstein2",
         database="saminstein"
         )
 
-mycursor = mydb.cursor()
+mycursor = db.cursor()
 
 mycursor.execute("SELECT * FROM students")
 
