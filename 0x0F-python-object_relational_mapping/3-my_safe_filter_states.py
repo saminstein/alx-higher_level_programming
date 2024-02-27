@@ -18,7 +18,6 @@ if __name__ == '__main__':
       db=argv[3])
 
     cursor = db.cursor()
-    safe = sys.argv[4]
     cursor.execute("""
           SELECT 
               *
