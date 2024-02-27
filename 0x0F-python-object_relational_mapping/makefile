@@ -1,0 +1,2 @@
+pep:
+	pycodestyle *.py
