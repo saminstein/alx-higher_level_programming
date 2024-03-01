@@ -36,4 +36,4 @@ if __name__ == '__main__':
     cities = cursor.fetchall()
 
     for city in cities:
-        print(cities)
+        print(citiy[0])
