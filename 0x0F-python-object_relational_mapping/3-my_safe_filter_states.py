@@ -24,10 +24,10 @@ if __name__ == '__main__':
           FROM
               states
           WHERE
-              state.name LIKE %(name)s
+              name LIKE %(name)s
           ORDER BY
               states.id ASC
-    """, {name: argv[4]})
+    """, {'name': argv[4]})
     states = cursor.fetchall()
 
     for state in states:
