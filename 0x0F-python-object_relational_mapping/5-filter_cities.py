@@ -25,12 +25,11 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
     cursor.execute("""
-          SELECT 
-              cities
-          FROM
-              states
-          WHERE
-              name LIKE %(state_name)s
+          SELECT cities.name
+            FROM cities
+          JOIN states ON cities.state_id = states.id
+          WHERE states.name LIKE %(state.
+          _name)s
           ORDER BY
               cities.id ASC
     """, {'state_name': argv[4]})
