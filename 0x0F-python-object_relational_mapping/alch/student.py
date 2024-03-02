@@ -1,6 +1,6 @@
-from sqlachemy import create_engine, Column, Integer, String
-from sqlachemy import sessionmaker
-from sqlachemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
