@@ -1,17 +1,13 @@
-from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.orm import declarative_base
-# mysql_db_url = "mysql://<username>:<password>@<hostname>:<port>/<database>"
+from sqlalchemy.orm import sessionmaker
 
-db_url = "sqlite:///database.db"
-engine = create_engine(db_url)
+from models import User, engine
 
-Base = declarative_base()
+Session = sessionmaker(bind=engine)
 
-class user(Base):
-    __tablename__ = "users"
-    
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    age = Column(Integer)
+session = Session()
 
-Base.metadata.create_all(engine)
+
+users = session.query(User).all()
+
+for user in users:
+    print(f"User id: {user.id}, name: {user.name}, age: {user.age}")
