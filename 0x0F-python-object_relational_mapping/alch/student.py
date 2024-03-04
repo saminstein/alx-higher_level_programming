@@ -1,11 +1,12 @@
+from sys import argv
 from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+d_ul = "sqlite:///database.db"
+engine = create_engine(d_ul)
 
 Session = sessionmaker(bind=engine)
-session = session()
+session = Session()
 
 Base = declarative_base()
 
@@ -18,4 +19,4 @@ class Student(Base):
     grade = Column(String(50))
     
 Base.metadata.create_all(engine)
-  
+print(student)
