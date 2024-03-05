@@ -9,5 +9,8 @@ session = Session()
 
 users = session.query(User).all()
 
-for user in users:
-    print(f"User id: {user.id}, name: {user.name}, age: {user.age}")
+users.name = "Samuel Shielu"
+
+session.commit()
+
+print(users)
