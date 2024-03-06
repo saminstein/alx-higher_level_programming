@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     session = Session()
 
-    states = session.query(State).format(name: {argv[4]})
+    states = session.query(State).format(State.name == argv[4])
     
     for state in states:
         print('{0}: {1}'.format(state.id, state.name))
