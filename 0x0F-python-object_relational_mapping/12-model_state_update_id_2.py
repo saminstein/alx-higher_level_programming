@@ -19,3 +19,4 @@ if __name__ == '__main__':
         
         session.commit()
         print('{0}: {1}'.format(state_to_update.id, state_to_update.name)
+        session.close()
