@@ -14,9 +14,9 @@ if __name__ == '__main__':
     
     state_to_update = session.query(State).filter_by(id=2).first()
     
-    if state_to_update:
-        state_to_update.name = 'New Mexico'
-        
-        session.commit()
-        print('{0}: {1}'.format(state_to_update.id, state_to_update.name)
-        session.close()
+    #if state_to_update:
+    state_to_update.name = 'New Mexico'
+          
+    session.commit()
+    print('{0}: {1}'.format(state_to_update.id, state_to_update.name)
+    session.close()
