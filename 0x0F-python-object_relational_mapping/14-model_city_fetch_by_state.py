@@ -2,7 +2,7 @@
 
 from sys import argv
 from model_state import Base, State
-from mode_city import City
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
