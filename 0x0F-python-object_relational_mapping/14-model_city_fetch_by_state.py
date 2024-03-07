@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 from sys import argv
-from model_state import Base, State, City
+from model_state import Base, State
+from mode_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -12,7 +13,7 @@ if __name__ == '__main__':
 
     session = Session()
     
-    cities = session.query(City).order_by(cities.id).All()
+    cities = session.query(City, State).Join(State).All()
     
-    for city in cities:
+    for city, state in cities:
         print('{0}: {1} {2}'.format(state.name, city.name, city.name, ))
