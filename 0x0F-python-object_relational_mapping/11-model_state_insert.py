@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -15,3 +17,4 @@ if __name__ == '__main__':
     session.commit()
 
     print('{0}: '.format(new_state.id))
+    session.close()
