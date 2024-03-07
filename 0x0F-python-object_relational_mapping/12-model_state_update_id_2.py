@@ -24,5 +24,5 @@ if __name__ == '__main__':
     state_to_update.name = 'New Mexico'
           
     session.commit()
-    print('{0}: {1}'.format(state_to_update.id, state_to_update.name)
+    print('{0}: {1}'.format(state_to_update.id, state_to_update.name))
     session.close()
