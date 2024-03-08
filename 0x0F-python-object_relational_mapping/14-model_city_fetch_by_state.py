@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     session = Session()
     
-    cities = session.query(City, State).join(State).All()
+    cities = session.query(City, State).join(State).all()
     
     for city, state in cities:
         print('{0}: {1} {2}'.format(state.name, city.name, city.name, ))
