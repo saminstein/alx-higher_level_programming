@@ -1,6 +1,6 @@
 
 #from model_state import Base, State
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -8,6 +8,6 @@ Base = declarative_base()
 class City(Base):
     __tablename__ = "cities"
 
-    id = Column(Integer, nullable=False, primary_key=True);
+    id = Column(Integer, primary_key=True, nullable=False, );
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, nullable=False, FOREIGN KEY(state_id) REFERENCE state(id))
+    state_id = Column(Integer, ForeignKey('state_id'), nullable=False)
