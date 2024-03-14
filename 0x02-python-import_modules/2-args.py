@@ -21,4 +21,7 @@ if __name__ == "__main__":
             print("{}: {}".format(i, argv[i]))
 
     elif num_args == 0:
-        print(num_args, "arguments")
+        print("{} arguments.".format(num_args))
+    '''
+    print(num_args, "arguments")
+    '''
