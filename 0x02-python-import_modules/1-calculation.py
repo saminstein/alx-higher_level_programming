@@ -10,14 +10,14 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    result = add(a, b)
-    print("{} + {} = {}".format(a, b, result))
+    add = add(a, b)
+    print("{} + {} = {}".format(a, b, add))
 
-    result = sub(a, b)
-    print("{} - {} = {}".format(a, b, result))
+    sub = sub(a, b)
+    print("{} - {} = {}".format(a, b, sub))
 
-    result = mul(a, b)
-    print("{} * {} = {}".format(a, b, result))
+    mul = mul(a, b)
+    print("{} * {} = {}".format(a, b, mul))
 
-    result = div(a, b)
-    print("{} / {} = {}".format(a, b, result))
+    div = div(a, b)
+    print("{} / {} = {}".format(a, b, div))
