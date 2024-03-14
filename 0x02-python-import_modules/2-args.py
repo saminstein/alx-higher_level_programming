@@ -22,6 +22,3 @@ if __name__ == "__main__":
 
     elif num_args == 0:
         print("{} arguments.".format(num_args))
-    '''
-    print(num_args, "arguments")
-    '''
