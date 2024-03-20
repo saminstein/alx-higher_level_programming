@@ -22,4 +22,4 @@ def roman_to_int(r_str):
             result -= value
         else:
             result += value
-        return result
+    return result
