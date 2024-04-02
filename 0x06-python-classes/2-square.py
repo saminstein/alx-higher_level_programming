@@ -3,7 +3,16 @@
 
 
 class Square:
+    """ class Square that defines a square"""
+
     def __init__(self, size=0):
+        """
+        The __init__ method initializes the size valu
+        e of the square
+
+        args:
+            size (int): The size of the square
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
