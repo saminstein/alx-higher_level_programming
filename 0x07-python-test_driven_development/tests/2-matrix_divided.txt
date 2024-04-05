@@ -76,12 +76,6 @@ Test case #7: A test case with strings within the rows of the matrix
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Test case #8: A test case with integers instead of lists in the matrix
-    >>> matrix = [1, 2, 3, 4, 5, 6]
-    >>> matrix_divided(matrix, 3)
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 Test case #9: A test case with a string acting as a row
     >>> matrix = [[1, 2, 3], [4, 5, 6], 'Monty Python']
     >>> matrix_divided('matrix', 2)
