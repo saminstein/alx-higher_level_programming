@@ -40,18 +40,18 @@ def matrix_divided(matrix, div):
         if not isinstance(row, list) or not row:
             raise TypeError(matr_type)
 
-        if e_len != row_size:
-            raise TypeError(matr_size)
+    if e_len != row_size:
+        raise TypeError(matr_size)
 
-        for elems in row:
-            if not isinstance(elems, (int, float)):
-                raise TypeError(matr_type)
+    for elems in row:
+        if not isinstance(elems, (int, float)):
+            raise TypeError(matr_type)
 
-        if not isinstance(div, (int, float)):
-            raise TypeError("div must be a number")
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
 
-        if div == 0:
-            raise ZeroDivisionError("division by zero")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
 
     new_mat = [[round(elem / div, 2) for elem in row] for row in matrix]
     return new_mat
