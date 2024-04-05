@@ -84,7 +84,7 @@ Test case #9: A test case with a string acting as a row
 
 Test case #10: A test case with a matrix of empty lists
     >>> matrix = [[], []]
-    >>> (matrix_divided(matrix, 3))
+    >>> matrix_divided(matrix, 3))
     [[], []]
 
 Test case #11: A test case with a 'None' divider
