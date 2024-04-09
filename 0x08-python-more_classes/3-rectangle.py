@@ -82,7 +82,7 @@ class Rectangle:
             if rows != height - 1:
                 empty_str += "\n"
 
-            return empty_str
+        return empty_str
 
     def __str__(self):
         """
