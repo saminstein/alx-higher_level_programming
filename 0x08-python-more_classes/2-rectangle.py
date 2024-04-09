@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+defines a rectangle based on the empty class
+"""
+
+
 class Rectangle:
     """
     checks parameter and initialize some values
