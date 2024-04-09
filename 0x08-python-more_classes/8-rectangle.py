@@ -1,20 +1,37 @@
 #!/usr/bin/python3
 
+"""
+empty class Rectangle that defines a rectangle
+"""
+
+
 class Rectangle:
+    """
+    class rectangle
+    """
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """
+        instantiation with optional width and height
+        """
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
+        """
+        width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        width setter
+        """
         self.__width = value
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -23,10 +40,16 @@ class Rectangle:
 
     @property
     def height(self):
+        """
+        height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        height setter
+        """
         self.__height = value
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -34,16 +57,25 @@ class Rectangle:
             raise ValueError("width must be >= 0")
 
     def area(self):
+        """
+        return the area of the rectangle
+        """
         result = self.__width * self.__height
         return result
 
     def perimeter(self):
+        """
+        return the perimeter of the rectangle
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return 2 * (self.__width + self.__height)
 
     def draw_rectangle(self):
+        """
+        print the #
+        """
         empty_str = ""
         width = self.__width
         height = self.__height
@@ -61,6 +93,9 @@ class Rectangle:
             return empty_str
 
     def __str__(self):
+        """
+        return the rectangle with the character #
+        """
         return self.draw_rectangle()
 
     def __repr__(self):
