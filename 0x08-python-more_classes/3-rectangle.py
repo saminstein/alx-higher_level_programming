@@ -4,10 +4,10 @@
 empty class rectangle that defines a rectangle
 """
 
+
 class Rectangle:
     """
     checks parameter and initialize some values
-    
     Args:
         width: The width of  the rectangle
         height: The height of the rectangle
