@@ -5,4 +5,7 @@
 
 
 class LockedClass:
+    """
+    This function defines a class locked class
+    """
     __slots__ = ['first_name']
