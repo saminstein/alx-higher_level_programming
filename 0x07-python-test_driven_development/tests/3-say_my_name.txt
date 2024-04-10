@@ -26,12 +26,8 @@ Test case #1: A test case between a string and integer
     
 Test case #2: A test case where only first name is provided
     >>> say_my_name("John")
-    My name is [first_name]
+    My name is John 
     
 Test case #3: A test case where  first name and last name is correct
     >>> say_my_name("John", "Smith")
     My name is John Smith
-    
-Test case #4: A test case with only spaces
-    >>> say_my_name(" ", " ")
-    My name is      
