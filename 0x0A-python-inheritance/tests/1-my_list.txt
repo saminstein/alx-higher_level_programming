@@ -1,11 +1,13 @@
 Test for 1-my_list.py
 --------------------------------------------------
 
-Import module:
+Test case #0:
 --------------
-	>>> MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
+>>>
+--------------------------------------------------
 
-Test case #0: common case
+Test case #1: common case
 -------------------------
 
 >>> my_list = MyList()
@@ -23,7 +25,7 @@ Test case #0: common case
 >>>
 
 --------------------------------------------------
-Test case #1: pass list
+Test case #2: pass list
 
 >>> a = [1, 8, 6]
 >>> my_list = MyList(a)
@@ -32,7 +34,7 @@ Test case #1: pass list
 >>>
 
 --------------------------------------------------
-Test case #2: negative numbers
+Test case #3: negative numbers
 
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
