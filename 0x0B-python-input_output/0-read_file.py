@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-read file
+module function that reads from a text file
 """
 
 
@@ -10,5 +10,5 @@ def read_file(filename=""):
     """
 
     with open(filename, 'r', encoding="UTF8") as f:
-        line = f.read()
-        print(line, end='')
+        read_line = f.read()
+        print(read_line, end='')
