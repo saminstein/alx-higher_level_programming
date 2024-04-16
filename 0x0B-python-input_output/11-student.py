@@ -6,11 +6,17 @@ student to disk and reload module
 
 class Student:
     def __init__(self, first_name, last_name, age):
+        """
+        special method to initialize
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
+        """
+        method returns dictionary description
+        """
         if attrs is not None:
             result_dict = {}
             for attr in attrs:
