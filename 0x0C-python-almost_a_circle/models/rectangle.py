@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""
+module that defines a class rectangle that inherits from base
+"""
 
 from models.base import Base
 
 
 class Rectangle(Base):
+    '''
+    defines and initializes the rectangle class wi
+    th the private instance attribute
+    '''
     def __init__(self, width, height, x=0, y=0, id=None):
         ''' constructor initializes a rectangle with dimensions, postions & id
         '''
