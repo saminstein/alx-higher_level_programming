@@ -138,6 +138,3 @@ class TestSquare(unittest.TestCase):
         s4 = Square(1, 1)
         s4_dictionary = s4.to_dictionary()
         self.assertIsInstance(s4_dictionary, dict)
-
-if __name__ == "__main__":
-    unittest.main()
