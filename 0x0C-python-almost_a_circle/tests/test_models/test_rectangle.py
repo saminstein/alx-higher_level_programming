@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Test module for verifying the functionality of the Rectangle class
 """
@@ -120,6 +119,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r1), '[Rectangle] (4) 1/1 - 3/2')
 
     def test_invalid_arg(self):
+        ''' tests invalid args '''
         with self.assertRaises(TypeError):
             r1 = Rectangle(3, 2, 1, 1, 4, 10)
 

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Test module for verifying the functionality of the Base class
 """
@@ -22,6 +21,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(result.total_errors, 0, 'PEP 8 style issues found')
 
     def setUp(self):
+        ''' imports module, Instantiates class '''
         Base._Base__nb_objects = 0
 
     def test_base_instance(self):
