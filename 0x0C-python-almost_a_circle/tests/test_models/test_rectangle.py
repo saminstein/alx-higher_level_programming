@@ -130,3 +130,7 @@ class TestRectangle(unittest.TestCase):
         r4_dictionary = r4.to_dictionary()
         expected = "{'id': 3, 'width': 1, 'height': 1, 'x': 0, 'y': 0}"
         self.assertEqual(str(r4_dictionary), expected)
+
+
+if __main__ == "__main__":
+    unittest.main()
