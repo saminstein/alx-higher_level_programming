@@ -5,7 +5,6 @@ class Rectangle {
     if (Number.isInteger(w) && Number.isInteger(h) && w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-    } else {
     }
   }
 }
